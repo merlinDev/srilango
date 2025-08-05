@@ -1,19 +1,21 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export function middleware(req: NextRequest) {
-  const host = req.headers.get('host') || ''
-  const parts = host.split('.')
+export function middleware(request: NextRequest) {
+  const host = request.headers.get('host') || '';
+  const subdomain = host.split('.')[0];
 
-  // Skip root domain (srigo.lk)
-  if (parts.length < 3) return NextResponse.next()
+  // Skip www and root domain
+  if (subdomain === 'www' || host === 'srilango.com') {
+    return NextResponse.next();
+  }
 
-  const subdomain = parts[0]
-
-  // Ignore 'www'
-  if (subdomain === 'www') return NextResponse.next()
-
-  const url = req.nextUrl.clone()
-  url.pathname = `/sites/${subdomain}${url.pathname}`
-  return NextResponse.rewrite(url)
+  // Set subdomain in headers for client/server use
+  const response = NextResponse.next();
+  response.headers.set('x-subdomain', subdomain);
+  return response;
 }
+
+export const config = {
+  matcher: ['/((?!_next|favicon.ico).*)'],
+};
