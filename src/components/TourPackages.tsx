@@ -281,7 +281,7 @@ const TourPackages = () => {
                   <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">Highlights:</h4>
                   <div className="flex flex-wrap gap-1">
                     {tour.highlights.slice(0, 3).map((highlight, index) => (
-                      <span key={index} className="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full text-xs">
+                      <span key={index} className="bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs">
                         {highlight}
                       </span>
                     ))}
