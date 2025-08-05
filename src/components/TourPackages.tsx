@@ -60,7 +60,7 @@ const TourPackages = () => {
       groupSize: '2-12 People',
       price: '$849',
       rating: 4.8,
-      image: 'http://miro.medium.com/v2/da:true/resize:fit:1200/0*XKho2cag3QQivD6E',
+      image: 'https://miro.medium.com/v2/da:true/resize:fit:1200/0*XKho2cag3QQivD6E',
       highlights: ['Kandy to Ella Train Ride', 'Temple of the Tooth', 'Nuwara Eliya Tea Plantations', 'Ella Town', 'Haputale', 'Gregory Lake'],
       includes: ['Mountain Hotels', 'Train Tickets', 'Tea Factory Tours', 'Hiking Guides', 'All Meals'],
       itinerary: [
