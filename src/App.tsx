@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, MapPin, Phone, Mail, Star } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Hero from './components/Hero';
 import TourPackages from './components/TourPackages';
 import InquiryForm from './components/InquiryForm';
