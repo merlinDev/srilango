@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Clock, Users, MapPin, Star, Calendar, DollarSign, X } from 'lucide-react';
+import { Clock, Users, Star, X } from 'lucide-react';
 
 const TourPackages = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
